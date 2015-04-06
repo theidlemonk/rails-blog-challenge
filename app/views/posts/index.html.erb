@@ -1,1 +1,7 @@
-<h1>Index</h1>
+<h1>All Posts</h1>
+
+<% @posts.each do |post| %>
+<h2> <%=  link_to post.title, post  %> </h2>
+<h6><%=  post.created_at.strftime("%b %d, %Y at %l:%M %P")  %></h6>
+<hr>
+<% end %>
